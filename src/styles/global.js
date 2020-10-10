@@ -9,6 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
+    overflow: hidden;
+
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.colors.text};
     background: ${props => props.theme.colors.background};
