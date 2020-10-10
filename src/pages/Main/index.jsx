@@ -3,7 +3,6 @@ import React from 'react';
 import { Header } from '../../components';
 
 import mathImage from '../../styles/assets/images/math.png';
-import simbol from '../../styles/assets/images/simbol.png';
 
 import { Container } from './styles';
 
@@ -16,7 +15,7 @@ function Main({ toggleTheme }) {
         <img src={mathImage} alt="Math" />
 
         <div>
-          <h1>Calculadora de Regras de três simples</h1>
+          <h1>Calculadora de regras de três simples</h1>
 
           <p>
             A calculadora de regra de três simples permite descobrir um número
@@ -24,17 +23,21 @@ function Main({ toggleTheme }) {
           </p>
 
           <div className="inputs">
-            <input type="text" />
+            <input type="number" />
 
-            <input type="text" />
+            <span>está para</span>
+
+            <input type="number" />
           </div>
 
-          <img src={simbol} alt="simbol" />
+          <h2>Assim como</h2>
 
           <div className="inputs">
-            <input type="text" />
+            <input type="number" />
 
-            <input type="text" />
+            <span>está para</span>
+
+            <input type="number" />
           </div>
         </div>
       </section>

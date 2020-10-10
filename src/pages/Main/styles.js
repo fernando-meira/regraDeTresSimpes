@@ -24,6 +24,7 @@ export const Container = styled.main`
       h1 {
         font-size: 36px;
         font-weight: 700;
+        text-transform: initial;
         font-family: 'Montserrat', sans-serif;
         color: ${props => props.theme.colors.text};
       }
@@ -33,6 +34,15 @@ export const Container = styled.main`
 
         font-size: 18px;
         font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+        color: ${props => props.theme.colors.text};
+      }
+
+      h2 {
+        margin: 32px 0;
+
+        font-size: 36px;
+        font-weight: 700;
         font-family: 'Montserrat', sans-serif;
         color: ${props => props.theme.colors.text};
       }
@@ -53,6 +63,38 @@ export const Container = styled.main`
 
           background: ${props => props.theme.colors.secondary};
           color: ${props => props.theme.colors.text};
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        span::before {
+          content: '';
+          width: 0;
+          height: 0;
+          margin-right: 10px;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-right: 5px solid ${props => props.theme.colors.text};
+
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        span::after {
+          content: '';
+          width: 0;
+          height: 0;
+          margin-left: 10px;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid ${props => props.theme.colors.text};
+
+          display: inline-block;
+          vertical-align: middle;
         }
       }
     }
