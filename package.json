@@ -17,7 +17,8 @@
     "react-scripts": "3.4.3",
     "react-switch": "^5.0.1",
     "styled-components": "^5.2.0",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "typewriter-effect": "^2.13.1"
   },
   "scripts": {
     "start": "react-scripts start",

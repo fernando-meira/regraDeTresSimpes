@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from '../../components';
+import { Header, Footer } from '../../components';
 
 import mathImage from '../../styles/assets/images/math.png';
 
@@ -41,6 +41,8 @@ function Main({ toggleTheme }) {
           </div>
         </div>
       </section>
+
+      <Footer />
     </Container>
   );
 }

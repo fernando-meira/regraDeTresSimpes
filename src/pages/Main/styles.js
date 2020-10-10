@@ -21,6 +21,15 @@ export const Container = styled.main`
       flex-direction: column;
       justify-content: center;
 
+      .Typewriter {
+        margin: 16px 0 118px;
+
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+        color: ${props => props.theme.colors.text};
+      }
+
       h1 {
         font-size: 36px;
         font-weight: 700;
