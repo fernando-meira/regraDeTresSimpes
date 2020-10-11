@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { GiBroom } from 'react-icons/gi';
 
 import { Header, Footer } from '../../components';
 
@@ -7,13 +8,17 @@ import mathImage from '../../styles/assets/images/math.png';
 import { Container } from './styles';
 
 function Main({ toggleTheme }) {
+  const [result, setResult] = useState('');
   const [firstValue, setFirstValue] = useState('');
   const [thirdValue, setThirdValue] = useState('');
   const [secondValue, setSecondValue] = useState('');
 
-  const [result, setResult] = useState('');
-
-  console.log(result);
+  const clear = () => {
+    setResult('');
+    setFirstValue('');
+    setThirdValue('');
+    setSecondValue('');
+  };
 
   useEffect(() => {
     if (firstValue && thirdValue && secondValue) {
@@ -39,6 +44,10 @@ function Main({ toggleTheme }) {
             A calculadora de regra de três simples permite descobrir um número
             em proporção a outros dois que são conhecidos.
           </p>
+
+          <div className="broom">
+            <GiBroom onClick={clear} />
+          </div>
 
           <div className="inputs">
             <input
