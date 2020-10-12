@@ -16,6 +16,10 @@ export const Container = styled.header`
 
   background: ${props => props.theme.colors.secondary};
 
+  img {
+    max-height: 50%;
+  }
+
   ${media.lessThan('small')`
     width: 100vw;
     padding: 0 20px;

@@ -5,7 +5,7 @@ import { isMobile } from 'react-device-detect';
 import { ThemeContext } from 'styled-components';
 
 import { Writer } from '../../components';
-import logo from '../../styles/assets/images/logo.png';
+import logo from '../../styles/assets/images/logo.svg';
 
 import { Container } from './styles';
 
