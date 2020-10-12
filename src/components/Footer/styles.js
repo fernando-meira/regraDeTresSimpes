@@ -10,16 +10,4 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .Typewriter__wrapper {
-    a {
-      font-weight: 700;
-      text-decoration: none;
-      color: ${props => props.theme.colors.text};
-    }
-  }
-
-  .Typewriter__cursor {
-    color: ${props => props.theme.colors.primary};
-  }
 `;
