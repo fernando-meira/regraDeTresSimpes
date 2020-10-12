@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { lighten } from 'polished';
 import Swicth from 'react-switch';
+import { lighten } from 'polished';
+import { isMobile } from 'react-device-detect';
 import { ThemeContext } from 'styled-components';
 
+import { Writer } from '../../components';
 import logo from '../../styles/assets/images/logo.png';
 
 import { Container } from './styles';
@@ -12,7 +14,7 @@ function Header({ toggleTheme }) {
 
   return (
     <Container>
-      <img src={logo} alt="logo" />
+      {isMobile ? <Writer /> : <img src={logo} alt="logo" />}
 
       <Swicth
         onChange={toggleTheme}

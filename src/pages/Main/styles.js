@@ -7,16 +7,17 @@ export const Container = styled.main`
   flex-direction: column;
 
   section {
-    img {
-      width: 50%;
-    }
-
     width: 100%;
+    margin-top: 7%;
     padding: 110px 45px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    img {
+      width: 50%;
+    }
 
     > div {
       max-width: 720px;
@@ -58,7 +59,7 @@ export const Container = styled.main`
         margin-bottom: 2rem;
 
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
 
         cursor: auto;
         background: transparent;
@@ -136,6 +137,7 @@ export const Container = styled.main`
 
     section {
       width: 100%;
+      margin-top: 120px;
       padding: 90px 38px;
 
       > div {
@@ -177,6 +179,14 @@ export const Container = styled.main`
       > div {
         max-width: 600px;
 
+        h1, h2 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
         .inputs {
           input {
             width: 206px;
@@ -194,6 +204,10 @@ export const Container = styled.main`
 
       > div {
         max-width: 540px;
+
+        p {
+          margin: 16px 0 30px;
+        }
 
         .inputs {
           input {
@@ -232,8 +246,9 @@ export const Container = styled.main`
       flex-direction: column;
 
       img {
-        position: absolute;
         top: 50%;
+        z-index: -1;
+        position: absolute;
 
         width: 90%;
 
@@ -243,8 +258,35 @@ export const Container = styled.main`
       > div {
         max-width: 90%;
 
+        h1 {
+          font-size: 24px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        p {
+          margin: 16px 0 20px;
+
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .broom {
+          margin: 1rem 0;
+        }
+
+        h2 {
+          margin: 16px 0;
+
+          font-size: 36px;
+        }
+
         .inputs {
           flex-direction: column;
+
+          input {
+            width: 90%;
+          }
         }
       }
     }

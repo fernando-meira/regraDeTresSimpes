@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { GiBroom } from 'react-icons/gi';
+import { isMobile } from 'react-device-detect';
 
 import { Header, Footer } from '../../components';
+import ruleCalculation from '../../functions/ruleCalculation';
 
 import mathImage from '../../styles/assets/images/math.png';
 
@@ -21,13 +23,7 @@ function Main({ toggleTheme }) {
   };
 
   useEffect(() => {
-    if (firstValue && thirdValue && secondValue) {
-      const multiply = secondValue * thirdValue;
-      const division = multiply / firstValue;
-      const limitindDecimal = parseFloat(division.toFixed(2));
-
-      setResult(limitindDecimal);
-    }
+    setResult(ruleCalculation(firstValue, secondValue, thirdValue));
   }, [firstValue, thirdValue, secondValue, setResult]);
 
   return (
@@ -40,10 +36,12 @@ function Main({ toggleTheme }) {
         <div>
           <h1>Calculadora de regras de três simples</h1>
 
-          <p>
-            A calculadora de regra de três simples permite descobrir um número
-            em proporção a outros dois que são conhecidos.
-          </p>
+          {!isMobile && (
+            <p>
+              A calculadora de regra de três simples permite descobrir um número
+              em proporção a outros dois que são conhecidos.
+            </p>
+          )}
 
           <div className="broom">
             <GiBroom onClick={clear} />
@@ -81,7 +79,7 @@ function Main({ toggleTheme }) {
         </div>
       </section>
 
-      <Footer />
+      {!isMobile && <Footer />}
     </Container>
   );
 }

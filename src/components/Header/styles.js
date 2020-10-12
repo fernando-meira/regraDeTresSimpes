@@ -6,7 +6,7 @@ export const Container = styled.header`
   top: 0;
 
   width: 100%;
-  height: 140px;
+  height: 12%;
   padding: 0 45px;
   border-bottom: 1px solid ${props => props.theme.colors.primary};
 
@@ -18,7 +18,10 @@ export const Container = styled.header`
 
   ${media.lessThan('small')`
     width: 100vw;
-    height: 80px;
     padding: 0 20px;
+
+    img {
+      display: none;
+    }
   `}
 `;
